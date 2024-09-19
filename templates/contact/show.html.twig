@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails du Contact{% endblock %}
+
+{% block body %}
+    <h1>Détails du Contact</h1>
+
+    <table>
+        <tr>
+            <th>Adresse</th>
+            <td>{{ contact.address }}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{ contact.email }}</td>
+        </tr>
+        <tr>
+            <th>Numéro de Téléphone</th>
+            <td>{{ contact.phoneNumber }}</td>
+        </tr>
+    </table>
+
+    <a href="{{ path('contacts_index') }}">Retour à la liste</a>
+{% endblock %}

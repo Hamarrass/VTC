@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CourseController!{% endblock %}
+
+{% block body %}
+   <h1>Réserver une course</h1>
+    {{ form_start(form) }}
+        {{ form_row(form.pickupLocation) }}
+        {{ form_row(form.dropoffLocation) }}
+        {{ form_row(form.date) }}
+        <button type="submit">Réserver</button>
+    {{ form_end(form) }}
+{% endblock %}

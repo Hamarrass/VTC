@@ -1,3 +1,4 @@
+
 security:
     # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
     password_hashers:
@@ -32,6 +33,14 @@ security:
             logout:
                 path: logout
                 target: /
+            entry_point: form_login    
+            custom_authenticator: App\Security\ClientAuthenticator
+
+            remember_me:
+                secret: '%kernel.secret%'
+                lifetime: 604800
+                path: /
+                always_remember_me: true
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall

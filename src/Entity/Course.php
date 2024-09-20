@@ -4,13 +4,10 @@ namespace App\Entity;
 
 use App\Repository\CourseRepository;
 use Doctrine\ORM\Mapping as ORM;
-use App\Entity\Client;
-use App\Entity\Conducteur;
 
 #[ORM\Entity(repositoryClass: CourseRepository::class)]
 class Course
 {
-  
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
